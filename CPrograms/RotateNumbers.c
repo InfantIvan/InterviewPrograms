@@ -11,9 +11,9 @@ Write your code in this editor and press "Run" button to compile and execute it.
 int
 main ()
 {
-  char inputString[5], temp;
+  char inputString[50], temp;
   // variables to hold length and number of rotations
-  int len, nor,actualLength;
+  int len, nor, actualLength; 
   scanf ("%[^\n]s", inputString);
   scanf ("%d", &nor);
 
@@ -23,8 +23,13 @@ main ()
   len = sizeof (inputString) / sizeof (inputString[0]);
   printf ("%d", len);
   printf ("\n");
+
   
- 
+  for (len = 0; inputString[len] != '\0'; ++len);
+
+  printf ("%d", len);
+  printf ("\n");
+
   for (int i = 0; i < nor; i++)
     {
       temp = inputString[0];
